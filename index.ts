@@ -80,6 +80,7 @@ class Chain {
     
     if (isValid) {
       const newBlock = new Block(this.lastBlock.hash, transaction);
+      this.mine(newBlock.nonce)
       this.chain.push(newBlock);
     }
   }
